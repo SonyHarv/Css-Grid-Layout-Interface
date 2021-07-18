@@ -1,7 +1,9 @@
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
-  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  /* grid-template-rows: repeat(auto-fill, minmax(200px, 1fr)); */
+  /* grid-row-rows y grid-auto-columns sirven para crear filas y columnas de manera automática con un buen performance */
+  grid-auto-rows: 12.5rem;
   gap: 2rem;
   block-size: 100vh;
   max-inline-size: 64rem;
