@@ -1,20 +1,43 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
-  /* grid-template-rows: repeat(auto-fill, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, 200px);
   /* grid-row-rows y grid-auto-columns sirven para crear filas y columnas de manera automática con un buen performance */
-  grid-auto-rows: 12.5rem;
+  /* grid-auto-rows: 12.5rem; */
   gap: 2rem;
   block-size: 100vh;
   max-inline-size: 64rem;
   margin: auto;
+  grid-auto-flow: row;
+  /* grid-auto-flow: column dense; */
 }
 
 .item {
   border: 5px solid red;
   counter-increment: item;
+  font-size: 3rem;
+  font-family:arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item::before {
   content: counter(item);
+}
+
+.item:nth-of-type(4){
+border-color: purple;
+grid-row-start: 1;
+grid-column-start: 2;
+/* grid-column-end:span 2; */
+grid-row-end: span 2;
+
+}
+
+.item:nth-of-type(3) {
+  border-color: blue;
+  grid-row-start: 2;
+  grid-row-end:4;
+  grid-column-end:span 2;
 }
