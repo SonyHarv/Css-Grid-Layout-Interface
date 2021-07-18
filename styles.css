@@ -1,11 +1,11 @@
 .container {
-  border: 10px solid black;
   display: grid;
-  /* grid-template-columns: auto auto auto; varia de acuerdo al contenido  */
-  /* grid-template-columns: 33.33% 33.33% 33.33%; genera scroll si se combina con gap */
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 25rem 12.5rem;
-  gap: 3.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  block-size: 100vh;
+  max-inline-size: 64rem;
+  margin: auto;
 }
 
 .item {
@@ -16,14 +16,3 @@
 .item::before {
   content: counter(item);
 }
-
-.item:nth-of-type(1) {}
-
-.item:nth-of-type(2) {
-  margin-inline-start: 1.25rem;
-  padding-block: 1.25rem;
-}
-
-.item:nth-of-type(3) {}
-
-.item:nth-of-type(4) {}
