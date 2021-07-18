@@ -1,11 +1,15 @@
 .container {
   display: grid;
-  grid-template-columns: [inline-start] 100px 500px [inline-end];
-  grid-template-rows: 100px 600px 200px;
+  /* grid-template-columns: [inline-start] 20% 80% [inline-end]; */
+  /* grid-template-columns: [inline-start] 200px calc(100%-200px) [inline-end]; */
+  /* grid-template-columns: [inline-start] 200px auto [inline-end]; */
+  grid-template-columns: [inline-start] 1fr 2fr [inline-end];
+  grid-template-rows: 1fr 25rem 12.5rem;
   grid-template-areas: "header header" "sidebar main" "footer footer";
   /* gap: 40px; General */
   row-gap: 10px;
   column-gap: 20px;
+  block-size: 100vh;
   /* grid-column-gap: 40px; anteriormente se usaba*/
 }
 
