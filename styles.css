@@ -3,6 +3,10 @@
   grid-template-columns: [inline-start] 100px 500px [inline-end];
   grid-template-rows: 100px 600px;
   grid-template-areas: "header header" "sidebar main";
+  /* gap: 40px; General */
+  row-gap: 10px;
+  column-gap: 20px;
+  /* grid-column-gap: 40px; anteriormente se usaba*/
 }
 
 .item {
