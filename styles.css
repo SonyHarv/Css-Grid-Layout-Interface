@@ -1,16 +1,11 @@
 .container {
+  border: 10px solid black;
   display: grid;
-  /* grid-template-columns: [inline-start] 20% 80% [inline-end]; */
-  /* grid-template-columns: [inline-start] 200px calc(100%-200px) [inline-end]; */
-  /* grid-template-columns: [inline-start] 200px auto [inline-end]; */
-  grid-template-columns: [inline-start] 1fr 2fr [inline-end];
+  /* grid-template-columns: auto auto auto; varia de acuerdo al contenido  */
+  /* grid-template-columns: 33.33% 33.33% 33.33%; genera scroll si se combina con gap */
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 25rem 12.5rem;
-  grid-template-areas: "header header" "sidebar main" "footer footer";
-  /* gap: 40px; General */
-  row-gap: 10px;
-  column-gap: 20px;
-  block-size: 100vh;
-  /* grid-column-gap: 40px; anteriormente se usaba*/
+  gap: 3.25rem;
 }
 
 .item {
@@ -22,33 +17,13 @@
   content: counter(item);
 }
 
-/* .item:nth-of-type(4){
-  border-color: blue;
-  /* grid-column-end: inline-start; */
-
-/* grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row-start: 1;
-  grid-row-end: 6;
-} */
-
-.item:nth-of-type(1) {
-  grid-area: header;
-  /* grid-column-start:1 ;
-  grid-column-end: -1; */
-  /* grid-column: 1/-1; */
-}
+.item:nth-of-type(1) {}
 
 .item:nth-of-type(2) {
-  border-color: green;
-  grid-area: sidebar;
+  margin-inline-start: 1.25rem;
+  padding-block: 1.25rem;
 }
 
-.item:nth-of-type(3) {
-  border-color: indigo;
-  grid-area: main;
-}
-.item:nth-of-type(4){
-  grid-area: footer;
-  margin-block-start: 20px;
-}
+.item:nth-of-type(3) {}
+
+.item:nth-of-type(4) {}
