@@ -1,8 +1,8 @@
 .container {
   display: grid;
   grid-template-columns: [inline-start] 100px 500px [inline-end];
-  grid-template-rows: 100px 600px;
-  grid-template-areas: "header header" "sidebar main";
+  grid-template-rows: 100px 600px 200px;
+  grid-template-areas: "header header" "sidebar main" "footer footer";
   /* gap: 40px; General */
   row-gap: 10px;
   column-gap: 20px;
@@ -43,4 +43,8 @@
 .item:nth-of-type(3) {
   border-color: indigo;
   grid-area: main;
+}
+.item:nth-of-type(4){
+  grid-area: footer;
+  margin-block-start: 20px;
 }
